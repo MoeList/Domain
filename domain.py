@@ -11,7 +11,7 @@ domain='要监控的域名'
 if __name__ == '__main__':
     while (1==1):
         requests.get('http://127.0.0.1:' + port + '/send_private_msg?user_id=' + qq + '&message=域名检测启动成功')
-        res = requests.get('https://api.moeclub.org/whois/' + domain)
+        res = requests.get('https://api.moekee.com/whois/' + domain)
         res = res.text.split("\n")
         #print(res)
         for a in res:  # 第一个实例
