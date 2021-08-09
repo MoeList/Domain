@@ -14,7 +14,7 @@ if __name__ == '__main__':
         res = requests.get('https://api.moekee.com/whois/' + domain)
         res = res.text.split("\n")
         #print(res)
-        for a in res:  # 第一个实例
+        for a in res:
             b = a
             if 'Registry Expiry Date:' in a:
                 break
