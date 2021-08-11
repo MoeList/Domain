@@ -25,7 +25,7 @@ if __name__ == '__main__':
                 if res.days < 0:  #想要的时间
                     requests.get('http://127.0.0.1:' + port + '/send_private_msg?user_id=' + qq + '&message=域名删除提醒！！！\n''域名：' + str(domain) + '\n已到期 ' + str(res.days) + ' 天！')
                     time.sleep(5)  # 多个域名检测中间间隔秒数（没试过 0 秒）
-                elif res.days <= 60:
+                elif res.days >= 0 and res.days <= 60:
                     requests.get('http://127.0.0.1:' + port + '/send_private_msg?user_id=' + qq + '&message=域名到期提醒！！！\n''域名：' + str(domain) + '\n还有 ' + str(res.days) + ' 天域名到期！')
                     time.sleep(5)  # 多个域名检测中间间隔秒数（没试过 0 秒）
                 elif res.days > 60:
