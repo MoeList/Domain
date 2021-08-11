@@ -5,7 +5,7 @@ import datetime
 import time
 
 qq='接收信息QQ'
-port='12513'
+port='5700'
 
 if __name__ == '__main__':
     while (1==1):
